@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('check maven version on executor') {
+        stage("check maven version on executor") {
             steps {
-                sh 'mvn --version'
+                sh "mvn --version"
             }
         }
-        stage('check java version on executor') {
+        stage("check java version on executor") {
             steps {
-                sh 'java -version'
+                sh "java -version"
             }
         }
-        stage('verify shoppinglist build') {
+        stage("verify shoppinglist build") {
             steps {
-                sh 'mvn verify'
+                sh "mvn verify"
             }
         }
     }
