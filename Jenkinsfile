@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('check maven version') {
+        stage("check maven version") {
             steps {
-                sh 'mvn --version'
+                sh "mvn --version"
             }
         }
-        stage('check java version') {
+        stage("check java version") {
             steps {
-                sh 'java -version'
+                sh "java -version"
             }
         }
-        stage('run tests') {
+        stage("run tests") {
             steps {
-                sh 'mvn test'
+                sh "mvn test"
             }
         }
 
